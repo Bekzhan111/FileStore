@@ -9,6 +9,8 @@ class File extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['title'];
+
     public function scopeFilter($query, array $filters){
         if($filters['search'] ?? false){
             $query->where('title', 'like', '%' . request('search') . '%');

@@ -17,4 +17,12 @@ use App\Models\File;
 Route::get('/', [FileController::class, 'index']);
 
 
+Route::get('/files/create', [FileController::class, 'create']);
+
+Route::post('/files', [FileController::class, 'store']);
+
+Route::get('/files/{file}/edit', [FileController::class, 'edit']);
+
+Route::put('/files/{file}', [FileController::class, 'update']);
+
 Route::get('/files/{file}', [FileController::class, 'show']);

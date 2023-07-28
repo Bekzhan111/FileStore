@@ -10,12 +10,17 @@
                     >
                         <img
                             class="w-48 mr-6 mb-6"
-                            src="images/acme.png"
+                            src="{{ $file->file ? asset('storage/' . $file->file) : asset('images/no-image.png') }}"
                             alt=""
                         />
 
                         <h3 class="text-2xl mb-2">{{ $file->title }}</h3>
                     </div>
                 </div>
+            </div>
+            <div class="mt-4 p-2 flex space-x-6">
+                <a href="/files/{{ $file->id }}/edit">
+                    <i class="fa-solid fa-pencil"></i> Edit
+                </a>
             </div>
 @endsection

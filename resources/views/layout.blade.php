@@ -37,10 +37,11 @@
 >
 
     <a
-        href="/listings/create"
+        href="/files/create"
         class="absolute top-1/3 right-10 bg-black text-white py-2 px-5"
         >Upload file</a
     >
 </footer>
+<x-flash-message/>
 </body>
 </html>
