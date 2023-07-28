@@ -25,4 +25,6 @@ Route::get('/files/{file}/edit', [FileController::class, 'edit']);
 
 Route::put('/files/{file}', [FileController::class, 'update']);
 
+Route::delete('/files/{file}', [FileController::class, 'destroy']);
+
 Route::get('/files/{file}', [FileController::class, 'show']);

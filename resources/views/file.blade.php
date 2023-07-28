@@ -22,5 +22,12 @@
                 <a href="/files/{{ $file->id }}/edit">
                     <i class="fa-solid fa-pencil"></i> Edit
                 </a>
+                <form method="POST" action="/files/{{ $file->id }}">
+                    @csrf
+                    @method('DELETE')
+                    <button class="text-red-500"><i class="fa-solid fa-trash"></i>
+                        Delete
+                    </button>
+                </form>
             </div>
 @endsection

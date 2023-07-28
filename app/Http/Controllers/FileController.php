@@ -52,4 +52,9 @@ class FileController extends Controller
         $file->update($formFields);
         return back()->with('message', 'File updated successfully!');
     }
+
+    public function destroy(File $file){
+        $file->delete();
+        return redirect('/')->with('message', 'File deleted successfully');
+    }
 }
